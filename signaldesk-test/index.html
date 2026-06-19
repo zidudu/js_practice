@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SignalDesk</title>
+    <link rel="stylesheet" href="./signaldesk-style.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="SignalDesk home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>SignalDesk</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#product">Product</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login" href="#docs">Log in</a>
+        <a class="button button-primary" href="#pricing">Start free</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="product">
+        <div class="hero-grid" aria-hidden="true">
+          <span class="dot dot-one"></span>
+          <span class="dot dot-two"></span>
+          <span class="dot dot-three"></span>
+          <span class="dot dot-four"></span>
+        </div>
+        <div class="hero-copy">
+          <h1>SignalDesk</h1>
+          <p>One command surface for tasks, alerts, automations, and customer momentum.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pricing">Start free</a>
+            <button class="button button-secondary" id="demoButton" type="button">
+              <span class="play-icon" aria-hidden="true"></span>
+              View demo
+            </button>
+          </div>
+        </div>
+
+        <section class="product-preview" aria-label="SignalDesk command center preview">
+          <aside class="sidebar">
+            <div class="sidebar-mark brand-mark" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <a class="side-link active" href="#product">
+              <span class="icon monitor"></span>
+              Command Center
+            </a>
+            <a class="side-link" href="#product"><span class="icon check"></span>Tasks</a>
+            <a class="side-link" href="#product"><span class="icon bell"></span>Alerts</a>
+            <a class="side-link" href="#workflows"><span class="icon bolt"></span>Automations</a>
+            <a class="side-link" href="#product"><span class="icon users"></span>Customers</a>
+            <a class="side-link" href="#docs"><span class="icon bars"></span>Reports</a>
+            <a class="side-link" href="#docs"><span class="icon link"></span>Integrations</a>
+            <a class="side-link" href="#docs"><span class="icon gear"></span>Settings</a>
+            <div class="team-switch">Acme Team</div>
+          </aside>
+
+          <div class="dashboard">
+            <div class="dashboard-top">
+              <div>
+                <strong>Command Center</strong>
+                <button type="button">All teams</button>
+              </div>
+              <div class="dashboard-tools">
+                <label class="search">
+                  <span aria-hidden="true"></span>
+                  <input type="search" placeholder="Search..." />
+                </label>
+                <button type="button">This week</button>
+                <button class="round-button" type="button" aria-label="Notifications">3</button>
+                <button class="round-button sliders" type="button" aria-label="Settings"></button>
+              </div>
+            </div>
+
+            <div class="panel-grid">
+              <article class="panel alert-panel">
+                <div class="panel-title">
+                  <h2>Alert Queue</h2>
+                  <span class="count">7</span>
+                </div>
+                <div class="table header-row"><span>Alert</span><span>Source</span><span>Time</span></div>
+                <div class="table"><span><i class="sev red"></i>High error rate detected</span><span>API Gateway</span><span>2m ago</span></div>
+                <div class="table"><span><i class="sev orange"></i>Payment failure spike</span><span>Billing Service</span><span>7m ago</span></div>
+                <div class="table"><span><i class="sev orange"></i>DB replication lag</span><span>Primary DB</span><span>12m ago</span></div>
+                <div class="table"><span><i class="sev yellow"></i>SLA at risk: Response time</span><span>Web App</span><span>18m ago</span></div>
+                <a class="panel-link" href="#workflows">View all alerts</a>
+              </article>
+
+              <article class="panel timeline-panel">
+                <div class="panel-title"><h2>Automation Timeline</h2></div>
+                <ol class="timeline">
+                  <li><time>10:24</time><span class="ok"></span><p>Auto-retry failed jobs <em>Completed</em></p></li>
+                  <li><time>10:18</time><span class="ok"></span><p>Scale worker pool <em>Completed</em></p></li>
+                  <li><time>10:12</time><span class="ok"></span><p>Create incident in PagerDuty <em>Completed</em></p></li>
+                  <li><time>10:05</time><span class="ok"></span><p>Notify #ops channel <em>Completed</em></p></li>
+                  <li><time>10:01</time><span class="fail"></span><p>High error rate detected <em>Triggered</em></p></li>
+                </ol>
+                <a class="panel-link" href="#workflows">View all automations</a>
+              </article>
+
+              <article class="panel tasks-panel">
+                <div class="panel-title">
+                  <h2>Tasks</h2>
+                  <button type="button">My tasks</button>
+                </div>
+                <div class="tabs"><button class="selected">Open 12</button><button>In progress 3</button><button>Done</button></div>
+                <ul class="tasks">
+                  <li><span>Investigate 500 errors</span><b class="high">High</b><small>API Team</small></li>
+                  <li><span>Follow up with Acme Corp</span><b class="medium">Medium</b><small>CS Team</small></li>
+                  <li><span>Review billing anomalies</span><b class="high">High</b><small>Finance</small></li>
+                  <li><span>Update runbook</span><b class="low">Low</b><small>Ops</small></li>
+                  <li><span>Prepare incident report</span><b class="medium">Medium</b><small>Ops</small></li>
+                </ul>
+                <a class="panel-link" href="#product">View all tasks</a>
+              </article>
+
+              <article class="panel customer-panel">
+                <div class="panel-title"><h2>Customer Health</h2></div>
+                <div class="health header-row"><span>Customer</span><span>Health</span><span>Trend</span><span>MRR</span><span>Attention</span></div>
+                <div class="health"><span>Acme Corp</span><span><i class="sev red"></i>At risk</span><svg viewBox="0 0 80 24"><polyline points="0,8 14,9 24,18 38,7 52,15 65,13 80,19" /></svg><span>$54,500</span><span>2 alerts</span></div>
+                <div class="health"><span>Globex Inc.</span><span><i class="sev teal"></i>Healthy</span><svg viewBox="0 0 80 24"><polyline points="0,16 12,12 24,15 38,10 50,13 65,8 80,11" /></svg><span>$32,000</span><span>-</span></div>
+                <div class="health"><span>Initech</span><span><i class="sev red"></i>At risk</span><svg viewBox="0 0 80 24"><polyline points="0,7 12,14 25,9 38,18 54,16 66,20 80,13" /></svg><span>$18,750</span><span>1 alert</span></div>
+                <div class="health"><span>Soylent Corp</span><span><i class="sev teal"></i>Healthy</span><svg viewBox="0 0 80 24"><polyline points="0,15 14,13 24,10 38,12 53,8 66,9 80,6" /></svg><span>$12,400</span><span>-</span></div>
+                <a class="panel-link" href="#product">View all customers</a>
+              </article>
+
+              <article class="panel chart-panel">
+                <div class="panel-title">
+                  <h2>Operations Overview</h2>
+                  <button type="button">Error rate</button>
+                </div>
+                <div class="chart-wrap">
+                  <div class="chart-label top">2.0%</div>
+                  <div class="chart-label mid">1.0%</div>
+                  <svg class="line-chart" viewBox="0 0 520 210" role="img" aria-label="Error rate line chart">
+                    <path class="grid-line" d="M0 40H520M0 95H520M0 150H520M0 205H520" />
+                    <path class="chart-area" d="M0 150 C35 112, 52 174, 84 132 S142 84, 174 105 S222 74, 244 43 S304 168, 344 121 S408 109, 448 139 S494 128, 520 150 L520 210 L0 210 Z" />
+                    <path class="chart-line" d="M0 150 C35 112, 52 174, 84 132 S142 84, 174 105 S222 74, 244 43 S304 168, 344 121 S408 109, 448 139 S494 128, 520 150" />
+                    <circle cx="244" cy="43" r="5" />
+                  </svg>
+                  <div class="tooltip">May 15<br /><strong>1.42%</strong></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="workflow" id="workflows">
+        <h2>From signal to impact. Not busywork.</h2>
+        <div class="workflow-row">
+          <article><span class="wf-icon signal"></span><h3>Signal</h3><p>Alerts and events arrive in real time.</p></article>
+          <article><span class="wf-icon funnel"></span><h3>Triage</h3><p>AI prioritizes and routes to the right team.</p></article>
+          <article><span class="wf-icon lightning"></span><h3>Act</h3><p>Automations resolve or create tasks.</p></article>
+          <article><span class="wf-icon trend"></span><h3>Track</h3><p>Customer health and progress update.</p></article>
+          <article><span class="wf-icon target"></span><h3>Improve</h3><p>Insights help you optimize continuously.</p></article>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature-copy">
+          <h2>Everything your team needs in one place</h2>
+          <article><span class="mini-icon monitor"></span><div><h3>Unified Command Center</h3><p>See alerts, tasks, automations, and customer health together so nothing slips.</p></div></article>
+          <article><span class="mini-icon bolt"></span><div><h3>Smart Automations</h3><p>Turn repetitive work into reliable automations with clear visibility and controls.</p></div></article>
+          <article><span class="mini-icon users"></span><div><h3>Customer Momentum</h3><p>Track health, risks, and expansion signals to drive proactive outcomes.</p></div></article>
+          <article><span class="mini-icon bars"></span><div><h3>Actionable Insights</h3><p>Dashboards and reports help you focus on what moves the needle.</p></div></article>
+        </div>
+        <article class="workflow-card">
+          <div class="card-head">
+            <strong>High error rate workflow</strong>
+            <span><i></i> Active</span>
+            <label>On <input type="checkbox" checked /></label>
+          </div>
+          <div class="workflow-detail">
+            <div>
+              <small>Trigger</small>
+              <div class="rule-box">High error rate <em>Error rate > 1% for 5m</em></div>
+              <small>Actions</small>
+              <button>Create incident <span>in PagerDuty</span></button>
+              <button>Notify channel <span>#ops</span></button>
+              <button>Scale workers <span>Increase by 2</span></button>
+              <button>Add task <span>Investigate errors</span></button>
+            </div>
+            <div>
+              <small>Run history</small>
+              <ul class="run-history">
+                <li><span>May 18, 10:05 AM</span><b>Completed</b><em>1m 42s</em></li>
+                <li><span>May 18, 9:42 AM</span><b>Completed</b><em>1m 28s</em></li>
+                <li><span>May 18, 9:18 AM</span><b>Completed</b><em>1m 35s</em></li>
+                <li><span>May 18, 8:31 AM</span><b class="bad">Failed</b><em>-</em></li>
+              </ul>
+              <div class="insight">
+                <strong>Execution insights</strong>
+                <div><span style="width: 98%"></span></div>
+                <p>Success rate <b>98%</b></p>
+                <p>Avg. duration <b>1m 31s</b></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="integrations" id="docs">
+        <h2>Built for what you already use</h2>
+        <div class="logo-row" aria-label="Supported integrations">
+          <span><i class="logo-slack"></i>Slack</span>
+          <span><i class="logo-pager"></i>PagerDuty</span>
+          <span><i class="logo-jira"></i>Jira</span>
+          <span><i class="logo-github"></i>GitHub</span>
+          <span><i class="logo-datadog"></i>Datadog</span>
+          <span><i class="logo-aws"></i>AWS</span>
+          <span><i class="logo-cloud"></i>Google Cloud</span>
+          <span><i class="logo-stripe"></i>Stripe</span>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="pricing-copy">
+          <h2>Simple pricing. Start free.</h2>
+          <p>No credit card required.</p>
+        </div>
+        <article class="price-card"><h3>Starter</h3><p><strong>$0</strong> Free forever</p><ul><li>Up to 3 users</li><li>Basic automations</li><li>Community support</li></ul></article>
+        <article class="price-card featured"><span>Most popular</span><h3>Team</h3><p><strong>$29</strong> per user / month</p><ul><li>Everything in Starter</li><li>Advanced automations</li><li>Priority support</li></ul></article>
+        <article class="price-card"><h3>Business</h3><p><strong>Custom</strong> Let's talk</p><ul><li>Everything in Team</li><li>Advanced security</li><li>Dedicated support</li></ul></article>
+      </section>
+
+      <section class="final-cta">
+        <div>
+          <h2>Ready to run your operations from one command surface?</h2>
+          <p>Join teams using SignalDesk to reduce noise, move faster, and drive customer outcomes.</p>
+        </div>
+        <div>
+          <a class="button button-light" href="#pricing">Start free</a>
+          <button class="button button-outline" type="button"><span class="play-icon" aria-hidden="true"></span>View demo</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>SignalDesk</span>
+      </a>
+      <nav aria-label="Footer">
+        <a href="#product">Product</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+        <a href="#docs">Status</a>
+        <a href="#docs">Security</a>
+        <a href="#docs">Privacy</a>
+        <a href="#docs">Terms</a>
+      </nav>
+      <div class="socials" aria-label="Social links"><span></span><span></span><span></span></div>
+    </footer>
+
+    <script src="./signaldesk-script.js"></script>
+  </body>
+</html>
